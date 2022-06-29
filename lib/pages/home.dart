@@ -1,4 +1,5 @@
-import 'package:calculator_app/components/buttons/calculator_buttons.dart';
+import 'package:calculator_app/components/buttons.dart';
+import 'package:calculator_app/components/display.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorDisplay extends StatelessWidget {
@@ -18,88 +19,86 @@ class CalculatorDisplay extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 200, bottom: 20),
+            const Display(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                CalculatorButtons(
+                    text: 'AC', textcolor: 0xFFFF6E40, textsize: 20),
+                CalculatorButtons(
+                    text: '+/-', textcolor: 0xFFFF6E40, textsize: 24),
+                CalculatorButtons(
+                    text: '%', textcolor: 0xFFFF6E40, textsize: 24),
+                CalculatorButtons(
+                    text: '÷', textcolor: 0xFFFF6E40, textsize: 24),
+              ],
+            ),
+            const SizedBox(
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CalculatorButtons(
-                    text: 'AC', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '7', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '+/-', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '8', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '%', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '9', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '÷', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: 'x', textcolor: 0xFFFF6E40, textsize: 24),
               ],
             ),
             const SizedBox(
-              height: 6,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CalculatorButtons(
-                    text: '7', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '4', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '8', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '5', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '9', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '6', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: 'x', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '-', textcolor: 0xFFFF6E40, textsize: 24),
               ],
             ),
             const SizedBox(
-              height: 6,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CalculatorButtons(
-                    text: '4', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '1', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '5', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '2', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '6', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '3', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '-', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '+', textcolor: 0xFFFF6E40, textsize: 24),
               ],
             ),
             const SizedBox(
-              height: 6,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CalculatorButtons(
-                    text: '1', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '⌫', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '2', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '0', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '3', textcolor: 0xFFFFEBEE, textsize: 25),
+                    text: '.', textcolor: 0xFFFFEBEE, textsize: 24),
                 CalculatorButtons(
-                    text: '+', textcolor: 0xFFFF6E40, textsize: 25),
+                    text: '=', textcolor: 0xFFFF6E40, textsize: 24),
               ],
             ),
             const SizedBox(
-              height: 6,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                CalculatorButtons(
-                    text: '⌫', textcolor: 0xFFFFEBEE, textsize: 25),
-                CalculatorButtons(
-                    text: '0', textcolor: 0xFFFFEBEE, textsize: 25),
-                CalculatorButtons(
-                    text: '.', textcolor: 0xFFFFEBEE, textsize: 25),
-                CalculatorButtons(
-                    text: '=', textcolor: 0xFFFF6E40, textsize: 25),
-              ],
-            ),
-            const SizedBox(
-              height: 30,
+              height: 24,
             )
           ],
         ));
