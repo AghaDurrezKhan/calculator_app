@@ -6,7 +6,7 @@ class Display extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 140,
       color: const Color.fromARGB(255, 28, 32, 40),
     );
   }
